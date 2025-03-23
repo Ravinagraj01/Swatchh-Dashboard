@@ -2,12 +2,12 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 function Navbar() {
-  const activeLinkStyle = 'text-black font-semibold';
+  const activeLinkStyle = 'text-green-500 font-semibold';
   const normalLinkStyle = 'text-white';
-
+  
   return (
-    <div>
-      <div className='flex justify-between p-2 bg-green-700 text-white align-middle'>
+    <div className='fixed top-0 w-full bg-green-700 text-white z-50 h-16 '>
+      <div className='flex justify-between p-4 bg-green-900 text-green-300 align-middle  '>
         <div className="w-[25%] text-2xl font-semibold">Swachh Dashboard</div>
         
         {/* Navigation Links */}

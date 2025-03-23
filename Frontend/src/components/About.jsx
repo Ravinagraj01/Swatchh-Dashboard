@@ -2,44 +2,62 @@ import React from 'react';
 
 function About() {
   return (
-    <div className="p-8">
-      <h1 className="text-3xl font-bold mb-6">About Swachh Dashboard</h1>
+    <div className="p-8 bg-green-50 pt-[100px]">
+      <h1 className="text-4xl font-bold mb-8 text-center">About Swachh Dashboard</h1>
 
-      <section className="mb-8">
-        <h2 className="text-xl font-semibold mb-4">Our Mission</h2>
-        <p>
-          Swachh Dashboard is designed to revolutionize cleanliness management by providing a platform for users to report trash locations. With AI-powered detection and real-time tracking, the platform ensures quick and efficient resolution of reported issues.
-        </p>
-      </section>
+      {/* Section: Introduction */}
+      <div className="mb-12 flex items-center">
+        <div className="w-1/2 pr-8">
+          <h2 className="text-2xl font-semibold mb-4">Our Mission</h2>
+          <p className="text-lg text-gray-700">
+          Swachh Dashboard aims to promote cleanliness by enabling users to report trash, track cleanup progress, and earn rewards for their contributions.<br/><br/> We foster community collaboration by connecting volunteers, organizations, and local authorities for effective waste management.<br/><br/> Our platform ensures transparency through real-time updates and data-driven insights for a cleaner and healthier environment.
+          </p>
+        </div>
+        <div>
+            <img src='https://images.indianexpress.com/2019/09/climate-change.jpg' 
+            alt="About Us" 
+            className="w-full h-fullobject-cover rounded-xl" />
+        </div>
+      </div>
 
-      <section className="mb-8">
-        <h2 className="text-xl font-semibold mb-4">How It Works</h2>
-        <ul className="list-disc ml-8">
-          <li>Users upload images of trash with location details.</li>
-          <li>AI analyzes the image to confirm the presence of trash.</li>
-          <li>A nearby worker is assigned to clean the area.</li>
-          <li>Users receive reward points upon successful cleanup.</li>
-          <li>Admins monitor reports and ensure timely action.</li>
-        </ul>
-      </section>
+      {/* Section: Features */}
+      <h2 className="text-2xl font-semibold mb-8">Key Features</h2>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="p-6 border rounded-lg shadow-md bg-white">
+          <h3 className="text-xl font-bold mb-4">🗑️ Report Trash</h3>
+          <p>Users can easily report trash in their locality using our mobile app with image and location details.</p>
+        </div>
 
-      <section className="mb-8">
-        <h2 className="text-xl font-semibold mb-4">Future Goals</h2>
-        <ul className="list-disc ml-8">
-          <li>Expand to more cities and regions for broader impact.</li>
-          <li>Integrate with municipal corporations for better coordination.</li>
-          <li>Implement predictive analytics to identify trash-prone areas.</li>
-          <li>Introduce community challenges to encourage cleanliness.</li>
-          <li>Provide detailed reports and insights to stakeholders.</li>
-        </ul>
-      </section>
+        <div className="p-6 border rounded-lg shadow-md bg-white">
+          <h3 className="text-xl font-bold mb-4">👷 Worker Assignment</h3>
+          <p>Once reported, the nearest worker is assigned to clean the trash, ensuring a quick response.</p>
+        </div>
 
-      <section className="mb-8">
-        <h2 className="text-xl font-semibold mb-4">Get Involved</h2>
-        <p>
-          Join us in making our surroundings cleaner. Report trash, contribute to the community, and earn rewards. Every small action counts!
-        </p>
-      </section>
+        <div className="p-6 border rounded-lg shadow-md bg-white">
+          <h3 className="text-xl font-bold mb-4">🏆 Reward System</h3>
+          <p>Users earn reward points for reporting trash, encouraging active participation in maintaining cleanliness.</p>
+        </div>
+      </div>
+
+      {/* Section: Future Goals */}
+      <h2 className="text-2xl font-semibold my-8">Future Goals</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="p-6 border rounded-lg shadow-md bg-white">
+          <h3 className="text-xl font-bold mb-4">🌿 Expand Coverage</h3>
+          <p>We plan to expand to more cities and towns to make a larger impact.</p>
+        </div>
+
+        <div className="p-6 border rounded-lg shadow-md bg-white">
+          <h3 className="text-xl font-bold mb-4">📊 Data Insights</h3>
+          <p>Provide detailed analytics on cleanliness progress for authorities to take further action.</p>
+        </div>
+      </div>
+
+      {/* Section: Conclusion */}
+      <div className="mt-12 text-center">
+        <h2 className="text-2xl font-semibold mb-4">Join Us</h2>
+        <p className="text-lg text-gray-700">Become a part of the movement. Report trash, earn rewards, and make your community cleaner!</p>
+      </div>
     </div>
   );
 }

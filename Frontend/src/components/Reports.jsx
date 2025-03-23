@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer, LineChart, Line, PieChart, Pie, Cell } from 'recharts';
+import CleanedMap from './Map';
 
 function Reports() {
   // Random sample data
@@ -30,11 +31,14 @@ function Reports() {
   const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
 
   return (
-    <div className="p-8">
-        <div className='flex'>
-            <div className="week w-full">
+    <div className="p-8 bg-green-50 pt-[100px]">
+        <div className='w-full relative'>
+            <CleanedMap />
+        </div>
+        <div className='flex mt-[100px]'>
+            <div className="week w-full h-[500px] ">
                 {/* Weekly Report */}
-                <h2 className="text-xl font-semibold mb-4 m-4">Weekly Report</h2>
+                <h2 className="text-xl font-semibold  mb-4 m-4">Weekly Report</h2>
                 <ResponsiveContainer width="100%" height={300}>
                     <BarChart data={weeklyData}>
                     <XAxis dataKey="day" />
