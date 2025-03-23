@@ -1,4 +1,5 @@
 import generateToken from "../config/generateToken.js";
+import TrashReport from "../models/TrashReport.js";
 import User from "../models/User.js";
 
 
@@ -52,3 +53,29 @@ export const authuser = async (req, res) => {
         })
     };
 };
+
+export const getUserProfile = async (req, res) => {
+    try {
+        const user = req.user;
+        res.json({
+            name : user.name,
+            email : user.email,
+            role : user.role,
+            points : user.points
+        })
+    } catch (error) {
+        res.status(500).json({
+            message : 'Server Error'
+        })
+    }
+}
+
+export const getUserReports = async (req, res) => {
+    try {
+        const reports = await TrashReport.find({ user: req.user._id});
+    } catch (error) {
+        res.status(500).json({
+            message : 'Server Error'
+        })
+    }
+}
